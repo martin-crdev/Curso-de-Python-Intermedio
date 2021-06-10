@@ -6,11 +6,22 @@ def read():
         for i, palabra in enumerate(f):
             palabras.append(palabra)
     palabra_random = random.choice(palabras)
-    print(palabra_random)
+    return palabra_random
+
+def seperar_caracteres(palabra):
+    caracteres = []
+    for caracter in palabra:
+        caracteres.append(caracter)
+    num_caracteres = len(caracteres)-1
+    caracteres.pop(num_caracteres)
+    return caracteres
 
 
 def run():
-    read()
+    palabra = read()
+    caracteres = seperar_caracteres(palabra)
+   
+    print(caracteres)
 
 if __name__ == "__main__":
     run()
