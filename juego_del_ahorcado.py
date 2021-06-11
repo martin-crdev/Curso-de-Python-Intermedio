@@ -27,9 +27,13 @@ def seperar_caracteres(palabra):
 def run():
     palabra = read()
     caracteres = seperar_caracteres(palabra)
-   
-    print(caracteres)
-    borrar_pantalla()
+    
+    # for i in range(len(caracteres)):
+    #     print("__ ", end=" ")
+    
+    # print(caracteres)
+    # adivina = input("\n\nAdivina la palabra :")
+    
 
 if __name__ == "__main__":
     run()
