@@ -27,13 +27,22 @@ def seperar_caracteres(palabra):
 def run():
     palabra = read()
     caracteres = seperar_caracteres(palabra)
-    
-    # for i in range(len(caracteres)):
-    #     print("__ ", end=" ")
-    
-    # print(caracteres)
-    # adivina = input("\n\nAdivina la palabra :")
-    
+    ahorcado = []
 
+    for letra in caracteres:
+        ahorcado.append("__ ")
+    while ahorcado != caracteres:
+        borrar_pantalla()    
+        for i in range(len(ahorcado)):
+            print(ahorcado[i], end=" ")
+        print(caracteres)
+    
+        adivina = input("Adivina la palabra: ")
+
+        for index, value in enumerate(caracteres):
+            if value == adivina:
+                ahorcado[index] = adivina
+    print("Ganaste")
+    
 if __name__ == "__main__":
     run()
