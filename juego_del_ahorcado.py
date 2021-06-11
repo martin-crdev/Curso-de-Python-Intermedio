@@ -1,4 +1,11 @@
 import random
+import os
+
+def borrar_pantalla():
+    if os.name == "posix":
+        os.system("clear")
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system("cls")
 
 def read():
     palabras = []
@@ -22,6 +29,7 @@ def run():
     caracteres = seperar_caracteres(palabra)
    
     print(caracteres)
+    borrar_pantalla()
 
 if __name__ == "__main__":
     run()
