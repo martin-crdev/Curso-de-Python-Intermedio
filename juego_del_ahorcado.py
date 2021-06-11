@@ -42,6 +42,8 @@ def run():
         for index, value in enumerate(caracteres):
             if value == adivina:
                 ahorcado[index] = adivina
+    for i in range(len(ahorcado)):
+        print(ahorcado[i], emd=" ")
     print("Ganaste")
     
 if __name__ == "__main__":
