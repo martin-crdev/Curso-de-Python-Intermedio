@@ -31,20 +31,27 @@ def run():
 
     for letra in caracteres:
         ahorcado.append("__ ")
+
     while ahorcado != caracteres:
         borrar_pantalla()    
+
         for i in range(len(ahorcado)):
             print(ahorcado[i], end=" ")
         print(caracteres)
-    
+        
         adivina = input("Adivina la palabra: ")
-
+        if adivina.isalpha == False:
+             raise ValueError("No se pueden escribir numeros ")
+        
         for index, value in enumerate(caracteres):
             if value == adivina:
-                ahorcado[index] = adivina
+                    ahorcado[index] = adivina
+            
+    borrar_pantalla()
+
     for i in range(len(ahorcado)):
-        print(ahorcado[i], emd=" ")
-    print("Ganaste")
+        print(ahorcado[i], end=" ")
+    print("\nGanaste")
     
 if __name__ == "__main__":
     run()
